@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.activity.DetailActivity">
+
+    <!--    app:navGraph="@navigation/nav_graph_detail"-->
+
+<!--     <ImageView-->
+<!--        android:id="@+id/backgroundImageView"-->
+<!--        android:layout_width="412dp"-->
+<!--        android:layout_height="352dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        tools:srcCompat="@drawable/Comidatest"-->
+<!--        android:contentDescription="@string/imgDescription" />-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="456dp"-->
+<!--        android:layout_marginTop="275dp"-->
+<!--        app:cardBackgroundColor="@color/white"-->
+<!--        app:cardCornerRadius="16dp"-->
+<!--        app:cardMaxElevation="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="456dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/navigation_icon"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="360dp"-->
+<!--                android:background="?attr/actionBarItemBackground"-->
+<!--                android:contentDescription="@string/back"-->
+<!--                android:padding="10dp"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/sender_profile_image_view"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/sender_profile_image_view"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/subject_text_view"-->
+<!--                app:srcCompat="@drawable/ic_arrow_down"-->
+<!--                app:tint="@color/black" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvPlato"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="1dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:textColor="?android:attr/textColorSecondary"-->
+<!--                tools:text="@string/date" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvNombre"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="1dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_marginBottom="22dp"-->
+<!--                android:fontFamily="sans-serif-black"-->
+<!--                android:text="@string/name"-->
+<!--                android:textSize="30sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvDescripcion"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="105dp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:textColor="?android:attr/textColorSecondary"-->
+<!--                android:textSize="18sp"-->
+<!--                tools:text="@string/historia" />-->
+<!--        </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+
+<!--    <com.google.android.material.bottomappbar.BottomAppBar-->
+<!--        android:id="@+id/bottomAppBar2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:fabAlignmentMode="end"-->
+<!--        app:fabCradleRoundedCornerRadius="32dp"-->
+<!--        app:fabCradleMargin="8dp"-->
+<!--        app:hideOnScroll="true">-->
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/btnNavegacion2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            app:menu="@menu/btn_app_bar_food"-->
+<!--            android:background="@android:color/transparent"/>-->
+
+<!--    </com.google.android.material.bottomappbar.BottomAppBar>-->
+
+    <ImageButton
+        android:id="@+id/imgToolbarBtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_bg2"
+        android:paddingStart="4dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="8dp"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/host_fragment_detail"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_anchorGravity="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnPrincipal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_share"
+        app:tint="@color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

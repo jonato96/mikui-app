@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uce.edu.ec.mikui">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mikui">
+        <activity android:name="uce.edu.ec.mikui.view.ui.activity.SplashActivity"
+            android:theme="@style/SplashTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/file_paths" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="uce.edu.ec.mikui.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name="uce.edu.ec.mikui.view.ui.activity.MainActivity"
+            android:windowSoftInputMode="adjustNothing"/>
+
+        <activity android:name="uce.edu.ec.mikui.view.ui.activity.DetailActivity"
+            android:theme="@style/Theme.Mikui2.Transparent.ActivityDetail"/>
+
+        <activity android:name="uce.edu.ec.mikui.view.ui.activity.ResultActivity"/>
+
+        <activity android:name="uce.edu.ec.mikui.view.ui.activity.TestActivity"
+            android:theme="@style/TemaReconocimiento.ResultActivity"
+            android:exported="true"/>
+
+    </application>
+
+</manifest>

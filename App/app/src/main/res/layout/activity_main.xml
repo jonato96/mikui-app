@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.activity.MainActivity">
+
+<!--    <fragment-->
+<!--        android:id="@+id/host_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/bottom_nav_drawer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_anchor="@+id/host_fragment"
+        app:layout_anchorGravity="center"
+        app:navGraph="@navigation/nav_graph" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:fabCradleRoundedCornerRadius="32dp"
+        app:fabCradleMargin="8dp"
+        app:hideOnScroll="true">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btnNavegacion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            app:menu="@menu/btn_app_bar"/>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_mikuilogo_vector"
+        app:layout_anchor="@id/bottomAppBar"
+        app:tint="@color/white"
+        app:maxImageSize="32dp"
+        app:backgroundTint="@color/colorAccent"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Mikui</string>
+    <string name="more">mas</string>
+    <string name="content_description_more">descripcion de lo que puede hacer</string>
+    <string name="content_description_search">descripion de busqueda</string>
+    <string name="search">Buscar</string>
+    <string name="platillo_de_prueba">Plato de prueba</string>
+    <string name="home">Inicio</string>
+    <string name="settings">Info</string>
+    <string name="place">Lugares</string>
+    <string name="name">Encebollado</string>
+    <string name="date">El encebollado es patrimonio</string>
+    <string name="detalles">Pequena descripcion del platillo</string>
+    <string name="historia">Es un plato tradicional de la Costa, originario de la provincia del Guayas, es uno de los platos más tradicionales del Ecuador, se lo puede degustar a nivel nacional en huecas, mercados y restaurantes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Probando los fragmentos para ver si funciona</string>
+    <string name="back">regresar atras</string>
+    <string name="imgDescription">Imagen del plato</string>
+</resources>
