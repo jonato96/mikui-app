@@ -94,21 +94,23 @@ class MainActivity : AppCompatActivity(){
             true
         }
 
-        viewModel.getPing()
-        viewModel.myGetResponse.observe(this, Observer { response ->
-            //usamos el try catch en caso de que heroku se encuentre suspendido
-            try {
-                if(response.isSuccessful){
-                    Log.d("Response", "Ping "+ response.body()?.messaje.toString())
-                    Toast.makeText(this, "Servicios en linea", Toast.LENGTH_SHORT).show()
-                }else{
-                    Log.d("Response", response.errorBody().toString())//
-                    Toast.makeText(this, "Ups", Toast.LENGTH_SHORT).show()
-                }
-            }catch (e: SocketTimeoutException){
-                e.printStackTrace()
-            }
-        })
+        //Se comenta porque en el nuevo servicio no hay validacion de health check
+
+//        viewModel.getPing()
+//        viewModel.myGetResponse.observe(this, Observer { response ->
+//            //usamos el try catch en caso de que heroku se encuentre suspendido
+//            try {
+//                if(response.isSuccessful){
+//                    Log.d("Response", "Ping "+ response.body()?.messaje.toString())
+//                    Toast.makeText(this, "Servicios en linea", Toast.LENGTH_SHORT).show()
+//                }else{
+//                    Log.d("Response", response.errorBody().toString())//
+//                    Toast.makeText(this, "Ups", Toast.LENGTH_SHORT).show()
+//                }
+//            }catch (e: SocketTimeoutException){
+//                e.printStackTrace()
+//            }
+//        })
     }
 
     private fun requestCameraPermission(){
@@ -137,6 +139,10 @@ class MainActivity : AppCompatActivity(){
         }
     }
 
+    private val contract = registerForActivityResult(ActivityResultContracts.TakePicture()){
+
+    }
+
     private fun dispatchTakePictureIntent() {
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
             // Ensure that there's a camera activity to handle the intent
@@ -152,7 +158,7 @@ class MainActivity : AppCompatActivity(){
                     photoFile?.also {
                         val photoURI = FileProvider.getUriForFile(
                             this.applicationContext,
-                            "uce.edu.ec.mikui.fileprovider",
+                            "uce.edu.ec.mikui.FileProvider",
                             it
                         )
                         currentPhotoPath = photoURI.toString()

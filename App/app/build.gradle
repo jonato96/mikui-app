@@ -82,6 +82,9 @@ dependencies {
     //Glide is a fast and efficient open source media management and image loading framework for Android
     //https://github.com/bumptech/glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+//    implementation 'androidx.test:monitor:1.7.1'
+//    implementation 'androidx.test.ext:junit-ktx:1.2.1'
+//    testImplementation 'junit:junit:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
     //A fast circular ImageView perfect for profile images.
@@ -89,7 +92,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //loading
-    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+//    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
 
 
     //testImplementation 'junit:junit:4.+'

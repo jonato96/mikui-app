@@ -31,6 +31,8 @@ import uce.edu.ec.mikui.viewmodel.MainViewModel
 import uce.edu.ec.mikui.viewmodel.MainViewModelFactory
 import uce.edu.ec.mikui.data.modelo.Post
 import uce.edu.ec.mikui.data.dominio.Repositorio
+import uce.edu.ec.mikui.data.modelo.PredictionRequest
+import uce.edu.ec.mikui.data.modelo.PredictionResponse
 import uce.edu.ec.mikui.view.ui.activity.TestActivity
 import java.io.ByteArrayOutputStream
 import java.util.*
@@ -71,7 +73,7 @@ class CapturaFragment : Fragment() {
     private val pickImage = 100
     lateinit var currentPhotoPath: String
 
-    //firesore
+    //FireStorage
     private val storage = Firebase.storage
     private val storageRef = storage.reference
 
@@ -191,25 +193,25 @@ class CapturaFragment : Fragment() {
     fun inicio(){
         //val myImg: Bitmap = BitmapFactory.decodeFile(miPath)
         binding.shapeableImageView.setImageURI(miPath?.toUri())
-        binding.dotsLoading.visibility = View.VISIBLE
+//        binding.dotsLoading.visibility = View.VISIBLE
 
         val myImg: Bitmap = (binding.shapeableImageView.drawable as BitmapDrawable).bitmap
         val myImg64: String = convertBitmapToBase64(myImg)
 
-        val myPost = Post(myImg64)
+        val myPost = PredictionRequest(myImg64)
         viewModel.pushPost(myPost)
         viewModel.myResponse.observe(viewLifecycleOwner, Observer { response ->
             if (response.isSuccessful) {
                 val dato = response.body()
                 if (dato != null) {
                     //buscarDato(dato.id)
-                    bundle.putString("id", response.body()?.id.toString())
+                    bundle.putString("id", response.body()?.prediction.toString())
                     flagApi = true
                     readyState()
                     //binding.dotsLoading.visibility = View.GONE
                     //binding.subir.visibility = View.VISIBLE
                     Log.d("Response", response.body().toString())
-                    Log.d("Response", response.body()?.id.toString())
+                    Log.d("Response", response.body()?.prediction.toString())
                     Log.d("Response", response.code().toString())
                     Log.d("Response", response.message())
                     Log.d(

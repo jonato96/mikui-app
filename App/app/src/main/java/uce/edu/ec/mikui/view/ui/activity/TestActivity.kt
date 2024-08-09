@@ -26,7 +26,7 @@ import java.util.*
 
 class TestActivity : AppCompatActivity() {
 
-    //Firestore RealTime Database
+    //FireStore RealTime Database
     private val database = Firebase.database
     private val myRef = database.reference.child("platillos")
     //binding
@@ -67,7 +67,12 @@ class TestActivity : AppCompatActivity() {
 
 
                     }else{
-                        Log.d("valor", "El plato es : nulo")
+                        images(bundle?.getString("url")!!)
+                        binding.tvNombre.text = "Seguimos Mejorando"
+                        binding.tvTitulo.text = "Ups"
+                        binding.tvShort.text = "Al parecer se quiere reconocer un platillo que no se ha entrenado 🥹"
+                        binding.btMain.text = "Volver al listado."
+                        Log.d("valor", "Este platillo todavia no ha sido entrenado o no es un platillo.")
                     }
                 }
                 override fun onCancelled(error: DatabaseError) {
@@ -89,7 +94,7 @@ class TestActivity : AppCompatActivity() {
         }
     }
 
-    fun screenShot(view: View): Bitmap? {
+    private fun screenShot(view: View): Bitmap? {
         val bitmap = Bitmap.createBitmap(
             view.width,
             view.height-500, Bitmap.Config.ARGB_8888
@@ -99,7 +104,7 @@ class TestActivity : AppCompatActivity() {
         return bitmap
     }
 
-    fun getImageUri(inContext: Context, inImage: Bitmap): Uri? {
+    private fun getImageUri(inContext: Context, inImage: Bitmap): Uri? {
         val bytes = ByteArrayOutputStream()
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
         val path = MediaStore.Images.Media.insertImage(

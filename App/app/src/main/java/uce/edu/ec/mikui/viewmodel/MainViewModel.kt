@@ -11,10 +11,12 @@ import uce.edu.ec.mikui.data.modelo.Get
 import uce.edu.ec.mikui.data.modelo.Platillo
 import uce.edu.ec.mikui.data.modelo.Post
 import uce.edu.ec.mikui.data.dominio.Repositorio
+import uce.edu.ec.mikui.data.modelo.PredictionRequest
+import uce.edu.ec.mikui.data.modelo.PredictionResponse
 
 class MainViewModel(private val repositorio: Repositorio): ViewModel() {
 
-    val myResponse: MutableLiveData<Response<Post>> = MutableLiveData()
+    val myResponse: MutableLiveData<Response<PredictionResponse>> = MutableLiveData()
     val myGetResponse: MutableLiveData<Response<Get>> = MutableLiveData()
 
     fun getPing(){
@@ -24,7 +26,7 @@ class MainViewModel(private val repositorio: Repositorio): ViewModel() {
         }
     }
 
-    fun pushPost(post: Post){
+    fun pushPost(post: PredictionRequest){
         viewModelScope.launch {
             val response = repositorio.pushPost(post)
             myResponse.value = response

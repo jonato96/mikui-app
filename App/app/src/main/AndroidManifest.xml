@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="uce.edu.ec.mikui">
+
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -34,7 +39,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="uce.edu.ec.mikui.fileprovider"
+            android:authorities="uce.edu.ec.mikui.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

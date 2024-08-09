@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "449375616745",
+    "firebase_url": "https://mikuiapp-default-rtdb.firebaseio.com",
     "project_id": "mikuiapp",
     "storage_bucket": "mikuiapp.appspot.com"
   },

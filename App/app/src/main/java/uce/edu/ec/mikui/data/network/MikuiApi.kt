@@ -6,15 +6,17 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import uce.edu.ec.mikui.data.modelo.Get
 import uce.edu.ec.mikui.data.modelo.Post
+import uce.edu.ec.mikui.data.modelo.PredictionRequest
+import uce.edu.ec.mikui.data.modelo.PredictionResponse
 
 interface MikuiApi {
 
     @GET("ping")
     suspend fun getPing(): Response<Get>
 
-    @POST("prediccion")
+    @POST("predict")
     suspend fun pushPost(
-        @Body post: Post
-    ): Response<Post>
+        @Body post: PredictionRequest
+    ): Response<PredictionResponse>
 
 }

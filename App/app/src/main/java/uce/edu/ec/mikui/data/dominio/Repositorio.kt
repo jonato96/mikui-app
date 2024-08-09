@@ -17,6 +17,8 @@ import uce.edu.ec.mikui.core.RetrofitInstance
 import uce.edu.ec.mikui.data.DataSource
 import uce.edu.ec.mikui.data.modelo.Get
 import uce.edu.ec.mikui.data.modelo.Post
+import uce.edu.ec.mikui.data.modelo.PredictionRequest
+import uce.edu.ec.mikui.data.modelo.PredictionResponse
 
 class Repositorio() {
 
@@ -26,7 +28,7 @@ class Repositorio() {
         return dataSource.getPing()
     }
 
-    suspend fun pushPost(post: Post): Response<Post> {
+    suspend fun pushPost(post: PredictionRequest): Response<PredictionResponse> {
         return RetrofitInstance.api.pushPost(post)
     }
 

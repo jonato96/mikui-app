@@ -19,12 +19,16 @@ import uce.edu.ec.mikui.view.adapter.VersionAdapter
  */
 class InformacionFragment : Fragment() {
 
-    val lista: List<PlatilloVersion> = listOf(PlatilloVersion("Encebollado", "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
-        PlatilloVersion("Locro de papa", "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
-        PlatilloVersion("Cuy asado", "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
-        PlatilloVersion("Maito de pescado", "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
-        PlatilloVersion("Humitas", "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
-        PlatilloVersion("Fritada", "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"))
+    val lista: List<PlatilloVersion> = listOf(
+        PlatilloVersion("Colada Morada",  "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
+        PlatilloVersion("Cuy asado",      "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
+        PlatilloVersion("Encebollado",    "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
+        PlatilloVersion("Fanesca",        "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
+        PlatilloVersion("Fritada",        "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
+        PlatilloVersion("Humitas",        "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
+        PlatilloVersion("Llapingacho",    "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
+        PlatilloVersion("Quimbolitos",    "https://firebasestorage.googleapis.com/v0/b/mikuiapp.appspot.com/o/images%2Fplatillo.png?alt=media&token=a1cbbbfa-bba2-4075-9fff-db3ffea3b798"),
+        )
         // TODO: Rename and change types of parameters
         private lateinit var binding: FragmentInformacionBinding
 
