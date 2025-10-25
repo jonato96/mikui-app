@@ -107,10 +107,10 @@ class CapturaFragment : Fragment() {
 //
 //        }
 
-        binding.subir.setOnClickListener {
-            //subirFirebase()
-
-        }
+//        binding.subir.setOnClickListener {
+//            //subirFirebase()
+//
+//        }
     }
 
 //    private fun galleryAddPic() {
@@ -193,7 +193,7 @@ class CapturaFragment : Fragment() {
     fun inicio(){
         //val myImg: Bitmap = BitmapFactory.decodeFile(miPath)
         binding.shapeableImageView.setImageURI(miPath?.toUri())
-//        binding.dotsLoading.visibility = View.VISIBLE
+        binding.dotsLoading.visibility = View.VISIBLE
 
         val myImg: Bitmap = (binding.shapeableImageView.drawable as BitmapDrawable).bitmap
         val myImg64: String = convertBitmapToBase64(myImg)
@@ -208,8 +208,8 @@ class CapturaFragment : Fragment() {
                     bundle.putString("id", response.body()?.prediction.toString())
                     flagApi = true
                     readyState()
-                    //binding.dotsLoading.visibility = View.GONE
-                    //binding.subir.visibility = View.VISIBLE
+//                    binding.dotsLoading.visibility = View.GONE
+//                    binding.subir.visibility = View.VISIBLE
                     Log.d("Response", response.body().toString())
                     Log.d("Response", response.body()?.prediction.toString())
                     Log.d("Response", response.code().toString())

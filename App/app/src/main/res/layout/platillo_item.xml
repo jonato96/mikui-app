@@ -52,14 +52,14 @@
                     />
 
 
-                <TextView
-                    android:id="@+id/tvDescripcion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
-                    tools:text="@string/detalles" />
+<!--                <TextView-->
+<!--                    android:id="@+id/tvDescripcion"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:textAppearance="?attr/textAppearanceBody2"-->
+<!--                    android:textColor="?android:attr/textColorSecondary"-->
+<!--                    tools:text="@string/detalles" />-->
 
             </LinearLayout>
 

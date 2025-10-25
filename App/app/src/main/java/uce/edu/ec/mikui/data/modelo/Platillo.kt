@@ -10,4 +10,5 @@ data class Platillo(
     val titulo:String? = null,
     val shortd:String? = null,
     val origen:String? = null,
+    val nutri: Nutri? = null,
     @Exclude val key: String? = null)

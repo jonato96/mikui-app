@@ -16,6 +16,7 @@ import uce.edu.ec.mikui.data.modelo.Platillo
 import uce.edu.ec.mikui.core.RetrofitInstance
 import uce.edu.ec.mikui.data.DataSource
 import uce.edu.ec.mikui.data.modelo.Get
+import uce.edu.ec.mikui.data.modelo.Nutri
 import uce.edu.ec.mikui.data.modelo.Post
 import uce.edu.ec.mikui.data.modelo.PredictionRequest
 import uce.edu.ec.mikui.data.modelo.PredictionResponse
@@ -47,6 +48,7 @@ class Repositorio() {
                             child.child("titulo").getValue<String>(),
                             child.child("shortd").getValue<String>(),
                             child.child("origen").getValue<String>(),
+                            child.child("nutri").getValue<Nutri>(),
                             child.key)
                     if (platillo != null) {
                         listaPlatillo.add(platillo)
@@ -81,6 +83,7 @@ class Repositorio() {
                             child.child("titulo").getValue<String>(),
                             child.child("shortd").getValue<String>(),
                             child.child("origen").getValue<String>(),
+                            child.child("nutri").getValue<Nutri>(),
                             child.key)
                     if (platillo != null) {
                         listaPlatillo.add(platillo)

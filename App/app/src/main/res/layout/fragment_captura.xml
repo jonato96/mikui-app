@@ -71,28 +71,28 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/subir" />-->
 
-<!--    <com.agrawalsuneet.dotsloader.loaders.LazyLoader-->
-<!--        android:id="@+id/dots_loading"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:layout_marginTop="104dp"-->
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/dots_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:layout_marginTop="104dp"
 
-<!--        android:visibility="invisible"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/textView2"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView"-->
-<!--        app:lazyloader_animDur="400"-->
-<!--        app:lazyloader_dotsDist="10dp"-->
-<!--        app:lazyloader_dotsRadius="7dp"-->
-<!--        app:lazyloader_firstDelayDur="150"-->
-<!--        app:lazyloader_firstDotColor="#FF5722"-->
-<!--        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"-->
-<!--        app:lazyloader_secondDelayDur="300"-->
-<!--        app:lazyloader_secondDotColor="#FF9800"-->
-<!--        app:lazyloader_thirdDotColor="#FFC107" />-->
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:lazyloader_animDur="400"
+        app:lazyloader_dotsDist="10dp"
+        app:lazyloader_dotsRadius="7dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="#FF5722"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="#FF9800"
+        app:lazyloader_thirdDotColor="#FFC107" />
 
     <TextView
         android:id="@+id/textView2"
@@ -106,16 +106,16 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/subir"
-        android:layout_width="180dp"
-        android:layout_height="58dp"
-        android:text="Enviar"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+<!--    <Button-->
+<!--        android:id="@+id/subir"-->
+<!--        android:layout_width="180dp"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:text="Enviar"-->
+<!--        android:visibility="invisible"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView2"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/textView"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,7 +31,7 @@ class PlatilloAdapter(val platillos: List<Platillo>, val listener: HomeFragment)
         fun render(platillo: Platillo){
             binding.tvNombre.text = platillo.nombre
             binding.tvFecha.text = platillo.fecha
-            binding.tvDescripcion.text = platillo.titulo
+//            binding.tvDescripcion.text = platillo.titulo
             Picasso.get().load(platillo.url).into(binding.ivPoster)
 
         }

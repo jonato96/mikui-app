@@ -43,7 +43,7 @@ class PrediccionAdapter(val platillos: List<Platillo>):RecyclerView.Adapter<Pred
         fun render(platillo: Platillo){
             binding.tvNombre.text = platillo.nombre
             binding.tvFecha.text = platillo.fecha
-            binding.tvDescripcion.text = platillo.titulo
+//            binding.tvDescripcion.text = platillo.titulo
             binding.ivPoster?.let {
                 Glide.with(view.context)
                     .load(platillo.url)

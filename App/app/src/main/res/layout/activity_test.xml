@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         tools:text="Fotografia"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -38,35 +38,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCapturado"
-        tools:text="Titulo del platillo" />
-
-    <TextView
         android:id="@+id/tvShort"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:textAlignment="center"
+        android:justificationMode="inter_word"
         android:textColor="@color/white"
-        android:textSize="26sp"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
-        tools:text="Es un plato con mucho sabor de la cultura ecuatoriana." />
+        app:layout_constraintTop_toBottomOf="@+id/ivCapturado"
+        tools:text="Es un plato con mucho sabor de la cultura ecuatoriana. Es un plato con mucho sabor de la cultura ecuatoriana. Es un plato con mucho sabor de la cultura ecuatoriana. Es un plato con mucho sabor de la cultura ecuatoriana." />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btMain"
@@ -81,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvShort"
-        app:layout_constraintVertical_bias="0.331" />
+        app:layout_constraintVertical_bias="0.679" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabCompartiR"

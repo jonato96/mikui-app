@@ -68,10 +68,16 @@ class DetailFragment : Fragment() {
         id?.let {
             viewModel.obtenerPlatillo(it).observe(viewLifecycleOwner, Observer { resultado ->
                 binding.tvNombre.text = resultado.nombre
-                binding.tvPlato.text = resultado.titulo
-                binding.tvDescripcion.text = resultado.descripcion
-                binding.cdOrigen.text = resultado.origen
-                binding.tvSabiasQue.text = resultado.shortd
+
+                val nutritionalInfo = "Información Nutricional - Porción de ";
+
+                binding.infoMedia.text = nutritionalInfo.plus(resultado.nutri?.media)
+                binding.infoCal.text = resultado.nutri?.cal
+                binding.infoGr.text = resultado.nutri?.gr
+                binding.infoCar.text = resultado.nutri?.car
+                binding.infoPro.text = resultado.nutri?.pro
+
+                binding.tvSabiasQue.text = resultado.descripcion
                 images(resultado.url)
             })
         }

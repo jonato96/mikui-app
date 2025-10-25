@@ -5,5 +5,6 @@ data class PlatilloBase(
     val descripcion:String? = null,
     val titulo:String? = null,
     val origen:String? = null,
-    val shortd:String? = null
+    val shortd:String? = null,
+    val nutri:Nutri? = null,
 )

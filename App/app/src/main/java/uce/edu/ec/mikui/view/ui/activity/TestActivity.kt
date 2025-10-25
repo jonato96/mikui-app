@@ -54,22 +54,23 @@ class TestActivity : AppCompatActivity() {
                     // whenever data at this location is updated.
                     val platillo: PlatilloBase? = dataSnapshot.getValue(PlatilloBase::class.java)
                     if (platillo != null) {
+                        Log.d("valor", platillo.toString())
                         val registro = Platillo(platillo.nombre, platillo.descripcion,
-                            bundle?.getString("url"), dateInString.format(date), platillo.titulo, platillo.shortd, platillo.origen)
+                            bundle?.getString("url"), dateInString.format(date), platillo.titulo, platillo.shortd, platillo.origen, platillo.nutri)
                         //Picasso.get().load(registro.url).into(binding.ivCapturado)
                         val myRef = database.reference.child("recognizer")
                         myRef.child(myRef.push().key.toString()).setValue(registro)
 
                         images(registro.url!!)
                         binding.tvNombre.text = registro.nombre
-                        binding.tvTitulo.text = registro.titulo
+//                        binding.tvTitulo.text = "Algo de historia..."
                         binding.tvShort.text = registro.shortd
 
 
                     }else{
                         images(bundle?.getString("url")!!)
                         binding.tvNombre.text = "Seguimos Mejorando"
-                        binding.tvTitulo.text = "Ups"
+//                        binding.tvTitulo.text = "Ups"
                         binding.tvShort.text = "Al parecer se quiere reconocer un platillo que no se ha entrenado 🥹"
                         binding.btMain.text = "Volver al listado."
                         Log.d("valor", "Este platillo todavia no ha sido entrenado o no es un platillo.")
